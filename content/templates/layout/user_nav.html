@@ -1,0 +1,64 @@
+{% load static %}
+<!--user-data end-->
+<ul class="sidebar-menu m-hidden">
+    <li class="sub_menu_item sub_menu_item_job">
+        <a href="{% url 'jobs:jobdashboard' %}" title="">
+            <img src="{% static 'images/jobs.png' %}" alt=""/>
+            Jobs
+        </a>
+    </li>
+    <li class="sub_menu_item sub_menu_item_trending">
+        <a href="{% url 'account:trending' %}" title="">
+            <img src="{% static 'images/trending.png' %}" alt=""/>
+            Trending
+        </a>
+    </li>
+    <li class="sub_menu_item sub_menu_item_ideas">
+        <a href="{% url 'ideas:ideasdashboard' %}" title="">
+            <img src="{% static 'images/idea.png' %}" alt=""/>
+            Ideas
+        </a>
+    </li>
+    <li class="sub_menu_item sub_menu_item_clips">
+        <a href="{% url 'clips:clipsdashboard' %}" title="">
+            <img src="{% static 'images/clip.png' %}" alt=""/>
+            Clips
+        </a>
+    </li>
+    <li class="sub_menu_item sub_menu_item_trolls">
+        <a href="{% url 'trolls:trollsdashboard' %}" title="">
+            <img src="{% static 'images/troll.png' %}" alt=""/>
+            Trolls
+        </a>
+    </li>
+    <li class="sub_menu_item sub_menu_item_funny">
+        <a href="{% url 'funny:funnydashboard' %}" title="">
+            <img src="{% static 'images/funny.png' %}" alt=""/>
+            Funny
+        </a>
+    </li>
+    <li class="sub_menu_item sub_menu_item_inspired">
+        <a href="{% url 'inspired:inspireddashboard' %}" title="">
+            <img src="{% static 'images/inspired.png' %}" alt=""/>
+            Inspired
+        </a>
+    </li>
+    <li class="sub_menu_item sub_menu_item_group">
+        <a href="{% url 'groups:groupdashboard' %}" title="">
+            <img src="{% static 'images/group.png' %}" alt=""/>
+            Groups
+        </a>
+    </li>
+    <li class="sub_menu_item sub_menu_item_page">
+        <a href="{% url 'pages:pagedashboard' %}" title="">
+            <img src="{% static 'images/pages.png' %}" alt=""/>
+            Pages
+        </a>
+    </li>
+    <li class="sub_menu_item sub_menu_item_virus">
+        <a href="#" title="">
+            <img src="{% static 'images/coronavirus.png' %}" alt=""/>
+            Covid-19 guide Sytem
+        </a>
+    </li>
+</ul>

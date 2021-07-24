@@ -1,0 +1,49 @@
+
+<div class="user-data full-width">
+    <div class="user-profile">
+        <div class="username-dt">
+            <div class="usr-pic">
+                <img src="{{ curuser.avatar }}" alt="">
+            </div>
+        </div>
+        <!--username-dt end-->
+        <div class="user-specs">
+            <h3>{{ curuser.firstname }} {{ curuser.lastname }}</h3>
+            <span>{{ curuser.location }}</span>
+        </div>
+    </div>
+    <!--user-profile end-->
+    <ul class="user-fw-status">
+        <li>
+            {% if curuser.me == '1' %}
+                <a href="{% url 'account:viewconnections' 'following' %}" class="profile_user_avatar_new_follow_item"><h4>Following</h4></a>
+            {% else %}
+                <a href="#" class="profile_user_avatar_new_follow_item"><h4>Following</h4></a>
+            {% endif %}                
+            <span>
+                {% if curuser.following %}
+                    {{ curuser.following }}
+                {% else %}
+                    0
+                {% endif %}
+            </span>
+        </li>
+        <li>                
+            {% if curuser.me == '1' %}
+                <a href="{% url 'account:viewconnections' 'followers' %}" class="profile_user_avatar_new_follow_item"><h4>Followers</h4></a>
+            {% else %}
+                <a href="#" class="profile_user_avatar_new_follow_item"><h4>Followers</h4></a>
+            {% endif %}
+            <span>
+                {% if curuser.followers %}
+                    {{ curuser.followers }}
+                {% else %}
+                    0
+                {% endif %}
+            </span>
+        </li>
+        <li>
+            <a href="#" title="">View Profile</a>
+        </li>
+    </ul>
+</div>   
